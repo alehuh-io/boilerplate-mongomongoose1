@@ -1,33 +1,70 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const express = require('express');
-const app = express();
 
-// Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, { 
   useNewUrlParser: true, 
   useUnifiedTopology: true 
 });
 
-// Listen on Render's port (set automatically) or default 3000
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server is listening on port ${port}`));
 
-// ----- Your existing FCC Mongoose code -----
 let Person;
 
-const createAndSavePerson = (done) => { done(null); };
-const createManyPeople = (arrayOfPeople, done) => { done(null); };
-const findPeopleByName = (personName, done) => { done(null); };
-const findOneByFood = (food, done) => { done(null); };
-const findPersonById = (personId, done) => { done(null); };
-const findEditThenSave = (personId, done) => { done(null); };
-const findAndUpdate = (personName, done) => { done(null); };
-const removeById = (personId, done) => { done(null); };
-const removeManyPeople = (done) => { done(null); };
-const queryChain = (done) => { done(null); };
+const createAndSavePerson = (done) => {
+  done(null /*, data*/);
+};
 
-// Export functions as before
+const createManyPeople = (arrayOfPeople, done) => {
+  done(null /*, data*/);
+};
+
+const findPeopleByName = (personName, done) => {
+  done(null /*, data*/);
+};
+
+const findOneByFood = (food, done) => {
+  done(null /*, data*/);
+};
+
+const findPersonById = (personId, done) => {
+  done(null /*, data*/);
+};
+
+const findEditThenSave = (personId, done) => {
+  const foodToAdd = "hamburger";
+
+  done(null /*, data*/);
+};
+
+const findAndUpdate = (personName, done) => {
+  const ageToSet = 20;
+
+  done(null /*, data*/);
+};
+
+const removeById = (personId, done) => {
+  done(null /*, data*/);
+};
+
+const removeManyPeople = (done) => {
+  const nameToRemove = "Mary";
+
+  done(null /*, data*/);
+};
+
+const queryChain = (done) => {
+  const foodToSearch = "burrito";
+
+  done(null /*, data*/);
+};
+
+/** **Well Done !!**
+/* You completed these challenges, let's go celebrate !
+ */
+
+//----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
+
 exports.PersonModel = Person;
 exports.createAndSavePerson = createAndSavePerson;
 exports.findPeopleByName = findPeopleByName;
